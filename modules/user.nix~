@@ -1,0 +1,60 @@
+	{pkgs, ...}:
+	{
+ 	# Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users."vasu" = {
+    isNormalUser = true;
+    description = "vasu";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [
+     # thunderbird
+	xfce4-whiskermenu-plugin
+	krita
+	lmms
+	pcsx2
+	fastfetch
+	furmark
+	unzip
+	tor-browser
+	mupen64plus
+	alephone
+	rmg
+	nestopia-ue
+	bsnes-hd
+	dolphin-emu
+	parted
+	freetube
+	stremio-linux-shell
+	luanti
+	musescore
+	helm
+	carla
+	surge-xt
+	peazip
+	xfwm4-themes
+	zuki-themes
+	plank
+	andromeda-gtk-theme
+	dockbarx
+	xfce4-dockbarx-plugin
+	cavif
+	stilo-themes
+	amber-theme
+	marwaita
+	rose-pine-icon-theme
+	numix-gtk-theme
+	alacritty
+	dracula-icon-theme
+	kora-icon-theme
+	kanagawa-icon-theme
+	orchis-theme
+	graphite-gtk-theme
+	orchis-theme
+	gruvbox-dark-gtk
+	gruvbox-material-gtk-theme
+	gruvbox-dark-icons-gtk
+	capitaine-cursors-themed
+	emacsPackages.gruvbox-theme
+	android-tools
+    ];
+  };
+  }

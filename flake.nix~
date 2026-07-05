@@ -1,0 +1,38 @@
+{
+  description = "flake for nixos-desktop";
+
+  inputs = {
+      nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+      areofyl-fetch.url = "github:areofyl/fetch";
+      zen-browser = {
+  	      url = "github:youwen5/zen-browser-flake";
+	      inputs.nixpkgs.follows = "nixpkgs";
+	      };
+      plank-reloaded = {
+      		     url = "github:zquestz/plank-reloaded";
+		     inputs.nixpkgs.follows = "nixpkgs";
+		     };
+  };
+
+  outputs = { self, nixpkgs, plank-reloaded, ... }@inputs:
+  let
+	system = "x86-64-linux";
+	pkgs = import nixpkgs {
+	     inherit system;
+	     config = {
+	     	    allowUnfree = true;
+		    };
+		    };
+	in
+	{
+    nixosConfigurations = {
+      nixos-desktop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+	specialArgs = {inherit inputs system plank-reloaded; };
+        modules = [
+          ./configuration.nix
+        ];
+      };
+    };
+  };
+}

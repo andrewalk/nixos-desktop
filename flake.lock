@@ -1,0 +1,104 @@
+{
+  "nodes": {
+    "areofyl-fetch": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1783093791,
+        "narHash": "sha256-Lc5ILBo60TgJIt7fJywVGzaWFmpBjJRvbU9fD3yCK+0=",
+        "owner": "areofyl",
+        "repo": "fetch",
+        "rev": "33b548f9effd838b6e0fad8d19596e45174ba92e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "areofyl",
+        "repo": "fetch",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1781577229,
+        "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1783148766,
+        "narHash": "sha256-uslt2pqShTIXDdAHRHv2QkYLsVdY8Oqwz0EA48/RSM8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a50de1b7d8a586adc18d2395c19de7d6058e6030",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "plank-reloaded": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782799237,
+        "narHash": "sha256-eNPoYGD+Ntn56+4DY1xWzESGISDAxwdRZVhz0SmAbfM=",
+        "owner": "zquestz",
+        "repo": "plank-reloaded",
+        "rev": "164ac2c7355c7d02aea3bee8ccd553546afb7b1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zquestz",
+        "repo": "plank-reloaded",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "areofyl-fetch": "areofyl-fetch",
+        "nixpkgs": "nixpkgs_2",
+        "plank-reloaded": "plank-reloaded",
+        "zen-browser": "zen-browser"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783063092,
+        "narHash": "sha256-H6lM+h8+ZT25uWJwmYkER5yj5RJ9DP2++n5um/XH3J0=",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "rev": "36b24209358c82e0ea5404ba003ae8dc37334c86",
+        "type": "github"
+      },
+      "original": {
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
