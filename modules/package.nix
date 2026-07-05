@@ -12,6 +12,8 @@ environment.systemPackages = with pkgs; [
 	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 	inputs.plank-reloaded.defaultPackage.${pkgs.stdenv.hostPlatform.system}
 	dbus
+
 	inputs.areofyl-fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
+	emacsPackages.no-littering
 ];
 }
